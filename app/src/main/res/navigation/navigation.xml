@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/contadorFragment">
+
+    <fragment
+        android:id="@+id/contadorFragment"
+        android:name="com.example.buzzstats.ContadorFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/contador_fragment_layout" />
+</navigation>

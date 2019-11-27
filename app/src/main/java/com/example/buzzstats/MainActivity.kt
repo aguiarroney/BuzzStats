@@ -3,51 +3,30 @@ package com.example.buzzstats
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
+import com.example.buzzstats.databinding.ActivityMainBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.contador_fragment_layout.*
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var navController: NavController
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val plusFab : FloatingActionButton = findViewById(R.id.plus_fab)
-        val minusFab : FloatingActionButton = findViewById(R.id.minus_fab)
+        @Suppress("UNUSED_VARIABLE")
+        binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        navController = this.findNavController(R.id.myNavHostFragment)
 
-        plusFab.setOnClickListener {
-            modifyContador(1)
-        }
-
-        minusFab.setOnClickListener {
-            modifyContador(2)
-        }
+        NavigationUI.setupActionBarWithNavController(this, navController)
     }
 
-    private fun modifyContador(operador : Int){
-        var soma: Int
-        val qntAtualTextView: TextView  = findViewById(R.id.contador)
-        var qntAtualText = qntAtualTextView.text
-
-        if(qntAtualText.isEmpty())
-            qntAtualText = "0"
-
-
-        println("[LOG: MainActivity] TextView Value: "+qntAtualText)
-
-
-        if(operador == 1){
-            soma = qntAtualText.toString().toInt() + 1
-        }
-
-        else if(operador == 2 && qntAtualText.toString().toInt()>0){
-            soma = qntAtualText.toString().toInt() - 1
-        }
-
-        else{
-            soma = qntAtualText.toString().toInt()
-        }
-
-        qntAtualTextView.text = soma.toString()
-
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp()
     }
 }
