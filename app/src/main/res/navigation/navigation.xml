@@ -10,5 +10,17 @@
         android:id="@+id/contadorFragment"
         android:name="com.example.buzzstats.ContadorFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/contador_fragment_layout" />
+        tools:layout="@layout/contador_fragment_layout" >
+
+        <action
+            android:id="@+id/from_contador_to_final"
+            app:destination="@id/finalFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/finalFragment"
+        android:name="com.example.buzzstats.FinalFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/final_fragment_layout" />
 </navigation>

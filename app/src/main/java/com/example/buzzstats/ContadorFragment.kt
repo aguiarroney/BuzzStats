@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.buzzstats.databinding.ContadorFragmentLayoutBinding
 
 class ContadorFragment : Fragment(){
@@ -22,6 +24,10 @@ class ContadorFragment : Fragment(){
 
         binding.minusFab.setOnClickListener {
             modifyContador(2)
+        }
+
+        binding.fecharContaBtn.setOnClickListener {view : View ->
+            view.findNavController().navigate(ContadorFragmentDirections.fromContadorToFinal())
         }
 
         return binding.root
