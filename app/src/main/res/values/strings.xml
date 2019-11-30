@@ -3,4 +3,6 @@
     <string name="label_principal_string">Garrafas</string>
     <string name="plus_btn_string">+</string>
     <string name="fechar_conta_string">Fechar Conta</string>
+    <string name="mesa_fechada_string">Mesa fechada</string>
+    <string name="cosumo_string">Foram Consumidas:</string>
 </resources>

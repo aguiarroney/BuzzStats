@@ -27,7 +27,7 @@ class ContadorFragment : Fragment(){
         }
 
         binding.fecharContaBtn.setOnClickListener {view : View ->
-            view.findNavController().navigate(ContadorFragmentDirections.fromContadorToFinal())
+            view.findNavController().navigate(ContadorFragmentDirections.fromContadorToFinal(binding.contador.text.toString()))
         }
 
         return binding.root

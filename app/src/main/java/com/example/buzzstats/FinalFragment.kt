@@ -15,6 +15,10 @@ class FinalFragment : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.final_fragment_layout, container, false)
 
+        var ars = FinalFragmentArgs.fromBundle(arguments!!)
+
+        binding.finalContador.text = ars.contadorConsumo
+
         return binding.root
     }
 }
