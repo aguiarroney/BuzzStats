@@ -4,5 +4,9 @@
     <string name="plus_btn_string">+</string>
     <string name="fechar_conta_string">Fechar Conta</string>
     <string name="mesa_fechada_string">Mesa fechada</string>
-    <string name="cosumo_string">Foram Consumidas:</string>
+    <string name="consumo_string">Foram Consumidas:</string>
+    <string name="about_string">Download at Google Play</string>
+    <string name="about_menu_title">About</string>
+    <string name="share_string">Você bebeu: </string>
+    <string name="share_item_string">compartilhar</string>
 </resources>

@@ -28,4 +28,15 @@
             android:name="contadorConsumo"
             app:argType="string" />
     </fragment>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.buzzstats.AboutFragment"
+        android:label="@string/about_menu_title"
+        tools:layout="@layout/about_layout">
+
+        <argument
+            android:name="contadorConsumo"
+            app:argType="string" />
+    </fragment>
 </navigation>
